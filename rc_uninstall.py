@@ -2,7 +2,7 @@ import os
 import subprocess
 from tqdm import tqdm
 
-base_path = '/Users/jaegeun.yoon/dev/RemoteControler_apk'
+base_path = '/Users/' + os.getenv('USER') + '/dev/RemoteControler_apk'
 
 rc_matching = {
     # "package.name" : "file.apk"

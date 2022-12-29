@@ -18,7 +18,7 @@ else :
     except :
         print("adb error : ", status)
 
-base_path = '/Users/jaegeun.yoon/dev/Rooting_apk'
+base_path = '/Users/' + os.getenv('USER') + '/dev/Rooting_apk'
 
 rooting_matching = {
     # "package.name" : "file.apk"
@@ -53,7 +53,7 @@ rooting_matching = {
     "com.yellowes.su":"com.yellowes.su_2016-04-11.apk",
     "de.robv.android.xposed.installer":"de.robv.android.xposed.installer_v33_36570c.apk",
     "com.oasisfeng.greenify":"greenify-4-7-8.apk",
-    "me.phh.superuser":"phh's SuperUser_1.0.3.3_apkcombo.com.apk", # INSTALL_FAILED_NO_MATCHING_ABIS
+    "me.phh.superuser":"phh's SuperUser_1.0.3.3_apkcombo.com.apk", # INSTALL_FAILED_NO_MATCHING_ABIS, INSTALL_FAILED_DUPLICATE_PERMISSION
 }
 
 pkg_counter = 0

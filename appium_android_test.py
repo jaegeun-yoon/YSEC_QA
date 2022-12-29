@@ -13,7 +13,7 @@ class AppTest(unittest.TestCase) :
         desired_caps['platformVersion'] = '12.0'
         desired_caps['deviceName'] = 'emulator64_arm64'
 
-        desired_caps['app'] = '/Users/jaegeun.yoon/ysec/YSEC_DEV/app/build/intermediates/apk/debug/app-debug.apk'
+        desired_caps['app'] = '/Users/' + os.getenv('USER') + '/ysec/YSEC_DEV/app/build/intermediates/apk/debug/app-debug.apk'
 
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
         self.app = 'com.cultsotry.yanolja.nativeapp.dev'
@@ -27,7 +27,7 @@ class AppTest(unittest.TestCase) :
         else:
             print("installed ok")
 
-        #self.driver.install_app('/Users/jaegeun.yoon/QA/debug-app.apk')
+        #self.driver.install_app('/Users/' + os.getenv('USER') + '/QA/debug-app.apk')
 
     def test_app_remove(self):
         # check app installed

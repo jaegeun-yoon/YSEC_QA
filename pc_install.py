@@ -18,7 +18,7 @@ else :
     except :
         print("adb error : ", status)
 
-base_path = '/Users/jaegeun.yoon/dev/PalleralCloner_apk'
+base_path = '/Users/' + os.getenv('USER') + '/dev/PalleralCloner_apk'
 
 pc_matching = {
     # "package.name" : "file.apk"
